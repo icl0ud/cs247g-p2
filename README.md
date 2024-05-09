@@ -1,2 +1,6 @@
-# cs247g-p2
-Final project for CS247G
+# Rooted: A Plant's Tale
+## Synopsis
+## Target Audience
+## Themes
+## Gameplay
+## Future Plans
