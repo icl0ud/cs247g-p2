@@ -41,3 +41,15 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Background_Sky
+    uniqueID: 3560090463
+    locked: 0
+  - name: Background_Obj
+    uniqueID: 2427301047
+    locked: 0
+  - name: Middleground
+    uniqueID: 4265778601
+    locked: 0
+  - name: Foreground
+    uniqueID: 4078315131
+    locked: 0
