@@ -90,7 +90,7 @@ public class PlayerMovement : MonoBehaviour
         if (lastOnGroundTime > 0f && jumpBufferCounter > 0f && !isJumping)
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpingForce);
-            //SoundFXManager.instance.PlaySoundFXClip(jumpClip, transform, 0.5f);
+            SoundFXManager.instance.PlaySoundFXClip(jumpClip, transform, 0.5f);
             jumpBufferCounter = 0f;
             StartCoroutine(JumpCooldown());
         }
