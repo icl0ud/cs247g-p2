@@ -12,6 +12,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
+    [SerializeField] private AudioClip jumpClip;
+    [SerializeField] private AudioClip walkClip;
 
     void Update()
     {
@@ -20,6 +22,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetButtonDown("Jump") && IsGrounded())
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
+            SoundFXManager.instance.PlaySoundFXClip(jumpClip, transform, 0.5f);
         }
 
         if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
@@ -48,6 +51,7 @@ public class PlayerMovement : MonoBehaviour
             Vector3 localScale = transform.localScale;
             localScale.x *= -1f;
             transform.localScale = localScale;
+            // SoundFXManager.instance.PlaySoundFXClip(walkClip, transform, 1f);
         }
     }
 }
