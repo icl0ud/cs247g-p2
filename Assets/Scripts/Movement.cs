@@ -6,9 +6,9 @@ public class PlayerMovement : MonoBehaviour
 {
     private float horizontal;
 
-    private float runMaxSpeed = 12f;
-    private float runAccelAmount = 12f;
-    private float runDeccelAmount = 24f;
+    private float runMaxSpeed = 8f;
+    private float runAccelAmount = 8f;
+    private float runDeccelAmount = 16f;
     private float accelInAir = 0.5f;
     private float deccelInAir = 0.5f;
     private bool doConserveMomentum = true;
@@ -24,6 +24,7 @@ public class PlayerMovement : MonoBehaviour
     private float coyoteTime = 0.2f;
 
     [SerializeField] private Rigidbody2D rb;
+    [SerializeField] private Animator animator;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private AudioClip jumpClip;
@@ -38,6 +39,7 @@ public class PlayerMovement : MonoBehaviour
     {
         lastOnGroundTime -= Time.deltaTime;
         horizontal = Input.GetAxisRaw("Horizontal");
+        animator.SetFloat("Speed", Mathf.Abs(horizontal));
 
         if (IsGrounded())
             lastOnGroundTime = coyoteTime;
@@ -90,7 +92,7 @@ public class PlayerMovement : MonoBehaviour
         if (lastOnGroundTime > 0f && jumpBufferCounter > 0f && !isJumping)
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpingForce);
-            SoundFXManager.instance.PlaySoundFXClip(jumpClip, transform, 0.5f);
+            SoundFXManager.instance.PlaySoundFXClip(jumpClip, transform, 1f);
             jumpBufferCounter = 0f;
             StartCoroutine(JumpCooldown());
         }
