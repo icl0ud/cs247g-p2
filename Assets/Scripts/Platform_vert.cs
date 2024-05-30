@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Platform : MonoBehaviour
+public class Platform_vert : MonoBehaviour
 {
     public Transform pointA, pointB;
     public float speed;
