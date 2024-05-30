@@ -9,6 +9,7 @@ public class NPC : MonoBehaviour
     public Text dialogueText;
     public string[] dialogue;
     private int index;
+    public bool panelIsActive;
 
     public GameObject contButton;
     public float wordSpeed;
@@ -17,7 +18,7 @@ public class NPC : MonoBehaviour
     void Update()
     { 
 
-        if(Input.GetKeyDown(KeyCode.C) && playerIsClose)
+        if(Input.GetKeyDown(KeyCode.C) && playerIsClose && !panelIsActive)
         {
             if(dialoguePanel.activeInHierarchy)
             {
@@ -26,8 +27,12 @@ public class NPC : MonoBehaviour
             else
             {
                 dialoguePanel.SetActive(true);
+                panelIsActive = true;
                 StartCoroutine(Typing());
             }
+        } else if (Input.GetKeyDown(KeyCode.C) && playerIsClose && panelIsActive && dialogueText.text == dialogue[index])
+        {
+            NextLine();
         }
 
         if (dialogueText.text == dialogue[index]) {
@@ -56,7 +61,7 @@ public class NPC : MonoBehaviour
     {
         contButton.SetActive(false);
 
-        if(index < dialogue.Length - 1)
+        if (index < dialogue.Length - 1)
         {
             index++;
             dialogueText.text = "";
@@ -73,6 +78,7 @@ public class NPC : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             Debug.Log("Player is close");
+            zeroText();
             playerIsClose = true;
         }
 
@@ -85,6 +91,7 @@ public class NPC : MonoBehaviour
             Debug.Log("Player has exited");
             zeroText();
             playerIsClose = false;
+            panelIsActive = false;
         }
     }
 }
