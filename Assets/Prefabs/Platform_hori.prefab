@@ -32,7 +32,7 @@ Transform:
   - {fileID: 186000413423853253}
   - {fileID: 2260044281153220142}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2933648167885535283
 GameObject:
@@ -196,7 +196,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pointA: {fileID: 186000413423853253}
   pointB: {fileID: 2260044281153220142}
-  speed: 2
+  speed: 3
   moveRight: 1
 --- !u!61 &9107635259996933278
 BoxCollider2D:

@@ -7,7 +7,6 @@ public class Platform_hort : MonoBehaviour
     public Transform pointA, pointB;
     public float speed;
     public bool moveRight;
-    public Transform player;
 
     // Start is called before the first frame update
     void Start()
@@ -15,17 +14,6 @@ public class Platform_hort : MonoBehaviour
         
     }
 
-
-    void OnTriggerEnter2D(Collider2D col)
-    {
-        Debug.Log("Collided");
-        player.parent = col.transform;
-    }
-     
-    void OnTriggerExit2D()
-    {
-        player.parent = null;
-    }
 
     // Update is called once per frame
     void FixedUpdate()
@@ -44,5 +32,15 @@ public class Platform_hort : MonoBehaviour
         if (transform.position.x >= pointA.position.x) {
             moveRight = false;
         }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        collision.transform.SetParent(transform);
+    }
+    
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        collision.transform.SetParent(null);
     }
 }
