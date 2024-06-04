@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Sunflower_Puzzle.unity
     guid: d1f104216fe3af1438176d3e7dd51929
+  - enabled: 1
+    path: Assets/Scenes/End.unity
+    guid: 04763b8938a5f41fe9fd003051247ed1
   m_configObjects: {}
