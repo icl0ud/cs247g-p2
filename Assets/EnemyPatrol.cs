@@ -4,26 +4,46 @@ using UnityEngine;
 
 public class EnemyPatrol : MonoBehaviour
 {
-    [SerializeField] private float speed;
-    [SerializeField] private Rigidbody2D rb;
-    public bool MoveRight;
+    public Transform pointA;
+    public Transform pointB;
+    public float speed;
+
+    private Rigidbody2D rb;
+    private Animator anim;
+    private Transform destination;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        MoveRight = true;
-        //animator = GetComponent<Animator>();
+        anim = GetComponent<Animator>();
+        destination = pointB;
     }
 
     void Update()
     {
-        if (MoveRight)
+        Vector2 point = destination.position - transform.position;
+        if (destination == pointA.transform)
         {
-            transform.Translate(2 * Time.deltaTime * speed, 0, 0);
+            rb.velocity = new Vector2(-speed, 0);
+        } else
+        {
+            rb.velocity = new Vector2(speed, 0);
         }
-        else
+
+        if (Vector2.Distance(transform.position, destination.position) < 0.5f && destination == pointA)
         {
-            transform.Translate(-2 * Time.deltaTime * speed, 0, 0);
+            destination = pointB;
+            Vector3 localScale = transform.localScale;
+            localScale.x *= -1f;
+            transform.localScale = localScale;
+        }
+
+        if (Vector2.Distance(transform.position, destination.position) < 0.5f && destination == pointB)
+        {
+            Vector3 localScale = transform.localScale;
+            localScale.x *= -1f;
+            transform.localScale = localScale;
+            destination = pointA;
         }
     }
 }
