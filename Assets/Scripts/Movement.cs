@@ -41,8 +41,10 @@ public class PlayerMovement : MonoBehaviour
         horizontal = Input.GetAxisRaw("Horizontal");
         animator.SetFloat("Speed", Mathf.Abs(horizontal));
 
-        if (IsGrounded())
+        if (IsGrounded()) {
+            Debug.Log("Grounded!");
             lastOnGroundTime = coyoteTime;
+        }
 
         Jump();    
         Flip();
