@@ -42,7 +42,6 @@ public class PlayerMovement : MonoBehaviour
         animator.SetFloat("Speed", Mathf.Abs(horizontal));
 
         if (IsGrounded()) {
-            Debug.Log("Grounded!");
             lastOnGroundTime = coyoteTime;
         }
 
