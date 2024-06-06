@@ -490,7 +490,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a974322fc5c954962a1be1c97a036297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: Tutorial
+  level: OpenScene
   levelText: {fileID: 0}
 --- !u!1 &273041467
 GameObject:
