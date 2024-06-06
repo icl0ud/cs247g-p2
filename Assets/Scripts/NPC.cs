@@ -77,7 +77,6 @@ public class NPC : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            Debug.Log("Player is close");
             zeroText();
             playerIsClose = true;
         }
@@ -88,7 +87,6 @@ public class NPC : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            Debug.Log("Player has exited");
             zeroText();
             playerIsClose = false;
             panelIsActive = false;
