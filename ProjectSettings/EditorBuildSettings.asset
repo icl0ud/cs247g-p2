@@ -27,6 +27,9 @@ EditorBuildSettings:
     path: Assets/Scenes/FamilyHouse.unity
     guid: 61579c101dae34a43b6562a537a005ac
   - enabled: 1
+    path: Assets/Scenes/Library.unity
+    guid: 2356ef19b5438494aa9c124917bdf91b
+  - enabled: 1
     path: Assets/Scenes/Sunflower_Fields_1.unity
     guid: b33c510a95d43e04b9b1868e98efe751
   - enabled: 1

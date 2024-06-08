@@ -7945,7 +7945,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -216652165
-  m_SortingLayer: 4
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -28235,6 +28235,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1605041119037524471, guid: eb45a70335a74445ea67b011eccdf493, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -339
+      objectReference: {fileID: 0}
     - target: {fileID: 2850786011844711369, guid: eb45a70335a74445ea67b011eccdf493, type: 3}
       propertyPath: m_SizeDelta.x
       value: 768
@@ -28750,7 +28754,7 @@ MonoBehaviour:
   continueText: {fileID: 378715210}
   dialogue:
   - What an odd dream...
-  - Oh... It's getting late. I napped for a little too long.
+  - Oh... It's getting late. I guess I slept for a little too long.
   - Time to head home.
   panelIsActive: 0
   wordSpeed: 0.03
@@ -29611,7 +29615,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1610040501}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.1356001, y: -0.73530006, z: -7.276276}
+  m_LocalPosition: {x: 2.5912805, y: -0.75777006, z: -7.276276}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -30190,7 +30194,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1796141793}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.5744004, y: -1.9247003, z: 0}
+  m_LocalPosition: {x: -9.301281, y: -1.9022303, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -30840,7 +30844,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -216652165
-  m_SortingLayer: 4
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
