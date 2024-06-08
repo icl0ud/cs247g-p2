@@ -3,21 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Unity.VisualScripting;
-using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
 
 public class DialogueController : MonoBehaviour
 {
     public GameObject dialoguePanel;
-    public Text dialogueText;
+    public TMPro.TMP_Text dialogueText;
     public TMPro.TMP_Text continueText;
     public string[] dialogue;
     private int index;
     public bool panelIsActive;
     public float wordSpeed;
-    public Animator m_Animator;
+    private PlayerMovement player;
 
+    void Start()
+    {
+        player = FindObjectOfType<PlayerMovement>();
+    }
 
     void Update()
     { 
@@ -30,6 +33,7 @@ public class DialogueController : MonoBehaviour
             }
             else
             {
+                player.canMove = false;
                 dialoguePanel.SetActive(true);
                 panelIsActive = true;
                 StartCoroutine(Typing());
@@ -37,7 +41,6 @@ public class DialogueController : MonoBehaviour
         } 
         else if (Input.GetKeyDown(KeyCode.C) && panelIsActive && dialogueText.text == dialogue[index])
         {
-            m_Animator.SetTrigger("NextPanel");
             NextLine();
         }
 
@@ -51,6 +54,11 @@ public class DialogueController : MonoBehaviour
         dialogueText.text = "";
         index = 0;
         dialoguePanel.SetActive(false);
+        player.canMove = true;
+    }
+
+    public void OnFadeComplete()
+    {
         SceneManager.LoadScene("Tutorial");
     }
 

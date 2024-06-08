@@ -196,6 +196,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59c5a58fa98164c16bc5a247558b4378, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canMove: 1
   rb: {fileID: 2037562049140232637}
   animator: {fileID: 3106426285849781017}
   groundCheck: {fileID: 3303062822923492366}
@@ -251,3 +252,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 2037562049140232637}
+  animator: {fileID: 0}

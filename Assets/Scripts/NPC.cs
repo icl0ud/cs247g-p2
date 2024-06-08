@@ -14,12 +14,19 @@ public class NPC : MonoBehaviour
     public GameObject contButton;
     public float wordSpeed;
     public bool playerIsClose;
+    private PlayerMovement player;
+
+    void Start()
+    {
+        player = FindObjectOfType<PlayerMovement>();
+    }
 
     void Update()
     { 
 
         if(Input.GetKeyDown(KeyCode.C) && playerIsClose && !panelIsActive)
         {
+            player.canMove = false;
             if(dialoguePanel.activeInHierarchy)
             {
                 zeroText();
@@ -46,6 +53,8 @@ public class NPC : MonoBehaviour
         dialogueText.text = "";
         index = 0;
         dialoguePanel.SetActive(false);
+        player.canMove = true;
+
     }
 
     IEnumerator Typing() 
