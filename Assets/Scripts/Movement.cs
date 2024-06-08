@@ -18,7 +18,7 @@ public class PlayerMovement : MonoBehaviour
 
     private float jumpingForce = 16f;
 
-    private bool isFacingRight = true;
+    public bool isFacingRight = true;
     private bool isJumping;
     private float lastOnGroundTime = 0.1f;
     private float coyoteTime = 0.2f;
