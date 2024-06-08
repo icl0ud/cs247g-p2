@@ -902,6 +902,7 @@ MonoBehaviour:
     for you to know because...
   panelIsActive: 0
   wordSpeed: 0.03
+  shouldAnimate: 1
   mAnimator: {fileID: 1359720738}
   tAnimator: {fileID: 1259423113}
 --- !u!95 &1259423113
