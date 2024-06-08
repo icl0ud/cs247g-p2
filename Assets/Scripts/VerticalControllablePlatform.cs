@@ -49,7 +49,6 @@ public class VerticalControllablePlatform : MonoBehaviour
     {
         if (col.transform == player)
         {
-            Debug.Log("Player is on platform!");
             playerOnPlatform = true;
             col.transform.SetParent(transform);
         }
