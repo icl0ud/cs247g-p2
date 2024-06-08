@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5565329464561843887}
   - component: {fileID: 8198646980383336000}
-  - component: {fileID: 6025683599030678564}
   - component: {fileID: 3168012210283085464}
+  - component: {fileID: 7850485256637202912}
   m_Layer: 6
   m_Name: Sprite
   m_TagString: Untagged
@@ -86,22 +86,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6025683599030678564
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1027485607736442343}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e0c1462a07a1e421b89e559e8003fae8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pointA: {fileID: 8246206502184919791}
-  pointB: {fileID: 1927230665197393689}
-  speed: 3
-  moveUp: 1
 --- !u!61 &3168012210283085464
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -147,6 +131,23 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.340252, y: 1.3610972}
   m_EdgeRadius: 0
+--- !u!114 &7850485256637202912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1027485607736442343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ffd7af701233467381a70647bd63e7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointA: {fileID: 8246206502184919791}
+  pointB: {fileID: 1927230665197393689}
+  speed: 3
+  player: {fileID: 6124174010224124778, guid: f2ba94faaf3ca1d4b9f3f9d8bb27cbc2, type: 3}
+  fallingRate: 1
 --- !u!1 &3263761902469974791
 GameObject:
   m_ObjectHideFlags: 0
@@ -219,7 +220,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8607144816829132751}
   m_Layer: 0
-  m_Name: Platform_vert
+  m_Name: VerticalControllablePlatform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
