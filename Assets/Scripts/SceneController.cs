@@ -7,6 +7,7 @@ using TMPro;
 
 public class SceneController : MonoBehaviour
 {
+    public Animator anim;
     public string level;
     public TextMeshProUGUI levelText;
 
@@ -19,6 +20,11 @@ public class SceneController : MonoBehaviour
     }
 
     public void OpenScene()
+    {
+        anim.SetTrigger("FadeOut");
+    }
+
+    public void OnFadeComplete()
     {
         SceneManager.LoadScene(level);
     }

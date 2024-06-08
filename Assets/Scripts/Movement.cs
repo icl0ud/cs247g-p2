@@ -23,6 +23,8 @@ public class PlayerMovement : MonoBehaviour
     private float lastOnGroundTime = 0.1f;
     private float coyoteTime = 0.2f;
 
+    public bool canMove;
+
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Animator animator;
     [SerializeField] private Transform groundCheck;
@@ -37,6 +39,12 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        if (!canMove)
+        {
+            rb.velocity = Vector2.zero;
+            return;
+        }
+
         lastOnGroundTime -= Time.deltaTime;
         horizontal = Input.GetAxisRaw("Horizontal");
         animator.SetFloat("Speed", Mathf.Abs(horizontal));
@@ -51,6 +59,12 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (!canMove)
+        {
+            rb.velocity = Vector2.zero;
+            return;
+        }
+
         Run();
     }
 
@@ -93,7 +107,7 @@ public class PlayerMovement : MonoBehaviour
         if (lastOnGroundTime > 0f && jumpBufferCounter > 0f && !isJumping)
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpingForce);
-            SoundFXManager.instance.PlaySoundFXClip(jumpClip, transform, 1f);
+            //SoundFXManager.instance.PlaySoundFXClip(jumpClip, transform, 1f);
             jumpBufferCounter = 0f;
             StartCoroutine(JumpCooldown());
         }
