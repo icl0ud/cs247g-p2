@@ -15,6 +15,9 @@ public class DialogueController : MonoBehaviour
     private int index;
     public bool panelIsActive;
     public float wordSpeed;
+    public bool shouldAnimate;
+    public Animator mAnimator;
+    public Animator tAnimator;
     private PlayerMovement player;
 
     void Start()
@@ -41,6 +44,8 @@ public class DialogueController : MonoBehaviour
         } 
         else if (Input.GetKeyDown(KeyCode.C) && panelIsActive && dialogueText.text == dialogue[index])
         {
+            if (shouldAnimate)
+                mAnimator.SetTrigger("NextPanel");
             NextLine();
         }
 
@@ -55,6 +60,8 @@ public class DialogueController : MonoBehaviour
         index = 0;
         dialoguePanel.SetActive(false);
         player.canMove = true;
+        if (shouldAnimate)
+            tAnimator.SetTrigger("FadeOut");
     }
 
     public void OnFadeComplete()
