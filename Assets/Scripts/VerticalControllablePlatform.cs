@@ -52,6 +52,10 @@ public class VerticalControllablePlatform : MonoBehaviour
             playerOnPlatform = true;
             col.transform.SetParent(transform);
         }
+
+        if (col.gameObject.tag == "Box") {
+            col.transform.SetParent(transform);
+        }
     }
 
     private void OnCollisionExit2D(Collision2D col)
@@ -61,6 +65,10 @@ public class VerticalControllablePlatform : MonoBehaviour
             playerOnPlatform = false;
             col.transform.SetParent(null);
             moveUp = false;
+        }
+
+        if (col.gameObject.tag == "Box") {
+            col.transform.SetParent(null);
         }
     }
 }
