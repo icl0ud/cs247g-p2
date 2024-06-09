@@ -5,5 +5,7 @@ using UnityEngine;
 
 public class SceneInfo : ScriptableObject
 {
-    public bool isNextScene = true;
+    public bool spawnDefault = false;
+    public bool hasVisited = false;
+    public Vector2 spawnPoint = new Vector2();
 }

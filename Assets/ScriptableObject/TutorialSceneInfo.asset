@@ -10,6 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fcf7e69364ff74287b87095d70ec9f8a, type: 3}
-  m_Name: SceneInfo
+  m_Name: TutorialSceneInfo
   m_EditorClassIdentifier: 
-  isNextScene: 1
+  spawnDefault: 1
+  hasVisited: 0
+  spawnPoint: {x: 142.29271, y: 16.9326}
