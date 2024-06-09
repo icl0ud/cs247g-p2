@@ -7,8 +7,15 @@ public class InputSceneChange : MonoBehaviour
 {
     public string level;
     public Animator anim;
-
+    public SceneInfo sceneInfo;
+    public Transform transform;
     private bool playerIsClose;
+    private PlayerMovement player;
+
+    void Start()
+    {
+        player = FindObjectOfType<PlayerMovement>();
+    }
 
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.CompareTag("Player"))
@@ -28,6 +35,8 @@ public class InputSceneChange : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.C) && playerIsClose)
         {
+            player.canMove = false;
+            sceneInfo.spawnPoint = transform.position;
             anim.SetTrigger("FadeOut");
         }
     }
