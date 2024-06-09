@@ -8,9 +8,9 @@ public class VerticalControllablePlatform : MonoBehaviour
     public float speed;
     public float fallingRate;
     private Transform player;
+
     private bool moveUp;
     private bool playerOnPlatform;
-
 
     // Start is called before the first frame update
     void Start()
