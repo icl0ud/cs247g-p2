@@ -36,6 +36,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Sunnyvale.unity
     guid: 39af38a9e19cedd45ae5592d46c6e9e7
   - enabled: 1
+    path: Assets/Scenes/Sunflower_Puzzle_v2.unity
+    guid: 84fd9d18a779e4217ac63528ddb92708
+  - enabled: 0
     path: Assets/Scenes/Sunflower_Puzzle.unity
     guid: d1f104216fe3af1438176d3e7dd51929
   - enabled: 1
