@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: TownSceneInfo
   m_EditorClassIdentifier: 
   spawnDefault: 0
-  hasVisited: 1
-  spawnPoint: {x: 64.15253, y: -2.3573983}
+  hasVisited: 0
+  spawnPoint: {x: 0, y: 0}
