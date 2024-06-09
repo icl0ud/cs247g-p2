@@ -35,7 +35,14 @@ public class NextLevel_Ref : MonoBehaviour
         if (other.CompareTag("Player")) {
             player.canMove = false;
             sceneInfo.spawnPoint = player.transform.position;
-            sceneInfo.spawnPoint.x -= 0.5f;
+
+            if (player.isFacingRight)
+            {
+                sceneInfo.spawnPoint.x -= 0.5f;
+            } else 
+            {
+                sceneInfo.spawnPoint.x += 0.5f;
+            }
             anim.SetTrigger("FadeOut");
         }
     }

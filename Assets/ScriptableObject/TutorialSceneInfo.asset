@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnDefault: 1
   hasVisited: 0
-  spawnPoint: {x: 142.29271, y: 16.9326}
+  spawnPoint: {x: 0, y: 0}

@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcf7e69364ff74287b87095d70ec9f8a, type: 3}
   m_Name: TownSceneInfo
   m_EditorClassIdentifier: 
+  spawnDefault: 0
   hasVisited: 1
-  spawnPoint: {x: -37.93105, y: 9.642586}
+  spawnPoint: {x: 64.15253, y: -2.3573983}
